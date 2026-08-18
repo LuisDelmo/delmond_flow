@@ -1,37 +1,13 @@
+from model.layers import Dense
+from model import Sequential
+from model.layers import Layer
 import numpy as np
-import multiprocessing
-
-
-class Neuron:
-
-    def __init__(self,activation,parents):
-        self.inputs = None
-        self.weigths = None
-        self.bias = None
-        self.output = None
-        self.activation = activation
-        self.parents = np.array(*parents)
-
-    def insert_inputs(self,inputs):
-        self.inputs = inputs
-
-    def calculate_z(self):
-        self.output = self.inputs @ self.weigths + self.bias
-        return self.output
-
-    def get_weights(self):
-        return self.weigths
-
-
-
-    
 
 
 
 
 
 
-        
 
 
 X = np.array([
@@ -68,3 +44,23 @@ hidden_biases = np.array([
      0.96970518,   # neuron 4
      1.17776076,   # neuron 5
 ])
+
+
+
+
+
+this_layer = Layer(units=5,activation='relu')
+
+
+
+
+
+
+
+delmodel = Layer(units=5)
+
+
+
+
+
+
