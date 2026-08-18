@@ -293,30 +293,19 @@ the framework can represent an entire layer using matrices.
 
 For a batch:
 
-[
-X =
-\begin{bmatrix}
-x_{11} & x_{12} & \dots \
-x_{21} & x_{22} & \dots \
-\vdots & \vdots & \ddots
-\end{bmatrix}
-]
-
-and a weight matrix:
-
-[
+\[
 W =
 \begin{bmatrix}
-w_{11} & w_{12} & \dots \
+w_{11} & w_{12} & \dots \\
 w_{21} & w_{22} & \dots
 \end{bmatrix}
-]
+\]
 
 the layer computes:
 
-[
+\[
 Z = XW^T + b
-]
+\]
 
 This allows all neurons and training examples to be processed together.
 
