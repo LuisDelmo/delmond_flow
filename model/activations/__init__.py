@@ -1,3 +1,1 @@
-from .base import Activations
-from .sigmoid import Sigmoid
-from .relu import Relu
+from .base import relu,linear,sigmoid

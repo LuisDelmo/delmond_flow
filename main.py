@@ -1,10 +1,8 @@
-from model.layers import Dense
-from model import Sequential
-from model.layers import Layer
+
+
+
+
 import numpy as np
-
-
-
 
 
 
@@ -45,22 +43,35 @@ hidden_biases = np.array([
      1.17776076,   # neuron 5
 ])
 
+output_weights = np.array([
+    [6.78049239, 0.0, 0.0, -1.02988425, -0.10509523]
+])
+
+output_bias = np.array([-39.1567935])
+
+
+from model.layers import Dense
+from model.activations import relu
+
+
+
+output_layer = Dense(1,activation=relu)
+
+
+dense_layer = Dense(units=5,activation=relu)
+dense_layer.layer_weights = hidden_weights
+dense_layer.layer_bias = hidden_biases
+
+output_layer.layer_weights = output_weights
+output_layer.layer_bias = output_bias
+
+
+from model import Sequential
 
 
 
 
-this_layer = Layer(units=5,activation='relu')
-
-
-
-
-
-
-
-delmodel = Layer(units=5)
-
-
-
+print(rede_neural_do_delmo.predict(X))
 
 
 
