@@ -5,7 +5,7 @@ from .base import Layer
 class Dense(Layer):
     
     def __init__(self,units,activation='linear'):
-            super().__init__(units,activation)
+        super().__init__(units,activation)
 
     
 
