@@ -46,4 +46,6 @@ class Layer:
 
         n,m = self.layer_weights.shape
 
+        dj_dw = 1/m 
+
         
