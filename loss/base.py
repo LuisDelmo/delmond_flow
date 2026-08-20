@@ -7,6 +7,11 @@ def meansquarederror(y_train,y_hat):
     loss = np.mean((y_train-y_hat)**2)
     return loss
 
+def mse_gradient(y_train,y_hat):
+
+    n = y_train.size
+
+    return 2/n * (y_train - y_hat)
 
 
 

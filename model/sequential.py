@@ -33,6 +33,14 @@ class Sequential(Model):
     #TODO Cuda maybe later?
     def fit(self,X_train,y_train,epochs):
         
-        output = self.foward_propagation(input_value=X_train)
+        
+        output = self.predict(X_train)
+
+        loss = self.loss.calculate(y_train,output)
+        curr_gradient = self.loss.gradient(y_train,output)
+
+        for layer in self.layers[::-1]:
+            curr_gradient_gradient = layer.backward_pass_layer(curr_gradient)
+
         
     

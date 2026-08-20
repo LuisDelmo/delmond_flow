@@ -50,7 +50,7 @@ output_weights = np.array([
 output_bias = np.array([-39.1567935])
 
 
-from model.layers import Dense
+from model.layers import Dense,Input
 from model.activations import relu
 
 
@@ -65,13 +65,18 @@ dense_layer.layer_bias = hidden_biases
 output_layer.layer_weights = output_weights
 output_layer.layer_bias = output_bias
 
-
+from loss import MeanSquaredError
 from model import Sequential
 
+delmo_neural = Sequential([
+    dense_layer,
+    output_layer
+])
 
+delmo_neural.compile(loss_func=MeanSquaredError)
 
+delmo_neural.fit(X,y,epochs=10)
 
-print(rede_neural_do_delmo.predict(X))
 
 
 

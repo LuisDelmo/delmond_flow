@@ -1,2 +1,2 @@
-from .base import meansquarederror
+from .meansquarederror import MeanSquaredError
 from .base import sparsecrosscategoricalentropy

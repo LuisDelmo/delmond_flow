@@ -37,6 +37,13 @@ class Layer:
         self.z = self.calculate_Z()
         self.output_matrix = self.activation(self.z)
         return self.output_matrix
+    
+    def backward_pass_layer(self,gradient):
+        
+        dj_dyhat = gradient
+        
+        dj_dz = dj_dyhat * (self.z > 0)
 
+        n,m = self.layer_weights.shape
 
         

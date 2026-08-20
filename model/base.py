@@ -1,5 +1,5 @@
 import numpy as np
-from loss import Meansquarederror
+from loss import meansquarederror
 
 class Model:
     def __init__(self,X_train,y_train):
@@ -10,7 +10,7 @@ class Model:
         self.model_biases = None
 
 
-    def compile(self,optmizer=None,loss_func=Meansquarederror):
+    def compile(self,optmizer=None,loss_func=meansquarederror):
         self.loss = loss_func
         self.optmizer = optmizer
 

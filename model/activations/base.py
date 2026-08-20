@@ -6,7 +6,7 @@ def linear(z):
     return z
 
 def relu(z):
-    return np.maximum(0, z)
+    return np.maximum(0.001 * z, z)
 
 def sigmoid(z):
     return 1 / (1 + np.exp(-z))
